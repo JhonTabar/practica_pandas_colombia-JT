@@ -18,3 +18,24 @@ data = {
 
 df = pd.DataFrame(data)
 
+print("Nómina Básica",df.loc[:, ['Nombre', 'Salario_COP']])
+
+print("Rango Geográfico",df.loc[10:20, ['Ciudad', 'Edad']])
+
+print(df_nombre = df.set_index('Nombre'))
+
+print("Búsqueda Nominal ",df_nombre.loc['Elena Marín'])
+
+print("Habilidades Maestría",df.loc[df['Nivel_Estudio'] == 'Maestría', ['Experiencia_Años']])
+
+print("Región Caribe",df.loc[df['Ciudad'] == 'Barranquilla', 'Nivel_Estudio':'Remoto'])
+
+print("Presupuesto Itagüí",df.loc[df['Ciudad'] == 'Itagüí', ['Salario_COP']])
+
+print("Muestreo Intercalado",df.loc[df.index % 2 == 0, ['Nombre', 'Nivel_Estudio']])
+
+print("Veteranía",df.loc[df['Edad'] > 40, ['Nombre', 'Remoto']])
+
+print("Cierre de Lista",df.loc[45:49, :])
+
+print("Precisión de Años",df.loc[df['Experiencia_Años'] == 10, ['Ciudad']])
