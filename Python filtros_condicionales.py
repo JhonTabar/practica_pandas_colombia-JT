@@ -18,3 +18,22 @@ data = {
 
 df = pd.DataFrame(data)
 
+print("Altos Ingresos",df[df['Salario_COP'] > 10000000])
+
+print("Sede Principal",df[df['Ciudad'] == 'Medellín'])
+
+print("Experiencia Sénior",df[df['Experiencia_Años'] > 15])
+
+print("Investigación Remota",df[(df['Nivel_Estudio'] == 'Doctorado') & (df['Remoto'] == True)])
+
+print("Segmento Joven",df[(df['Edad'] >= 25) & (df['Edad'] <= 30)])
+
+print("Optimización en Bogotá",df[(df['Salario_COP'] < 4000000) & (df['Ciudad'] == 'Bogotá')])
+
+print("Especialistas Valle",df[(df['Ciudad'] == 'Cali') & (df['Nivel_Estudio'] == 'Especialización')])
+
+print("Altos Salarios Junior ",df[(df['Experiencia_Años'] < 5) & (df['Salario_COP'] > 4000000)])
+
+print("Nivel Técnico",df[(df['Nivel_Estudio'] == 'Tecnología') | (df['Nivel_Estudio'] == 'Pregrado')])
+
+print("Santander",df[(df['Ciudad'] == 'Bucaramanga') & (df['Remoto'] == False)])
