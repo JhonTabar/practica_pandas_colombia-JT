@@ -18,3 +18,22 @@ data = {
 
 df = pd.DataFrame(data)
 
+print("Primeros Registros",df.iloc[0:5])
+
+print("Punto Central ",df.iloc[24])
+
+print("Columnas Alternas",df.iloc[0:10, [0, 2, 5]])
+
+print("Dato Específico",df.iloc[10, 3])
+
+print("Último Décil",df.iloc[-10:])
+
+print("Subsección de Matriz",df.iloc[15:26, 1:5])
+
+print("Propiedades Finales",df.iloc[:, -2:])
+
+print("Muestreo Estratificado",df.iloc[[0, 10, 20, 30, 40], [0, 5]])
+
+print("Segmento Final",df.iloc[40:50, 0:3])
+
+print("Inversión",df.iloc[::-1])
